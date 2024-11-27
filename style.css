@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    width: 80%;
+    margin: 50px auto;
+    background-color: rgba(246, 246, 235, 0.795);
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+}
+
+table {
+    margin: 20px auto;
+    width: 60%;
+    border-collapse: collapse;
+}
+
+table td {
+    padding: 12px 15px;
+    border: none;
+    color: #555;
+    text-align: left;
+}
+
+table td:first-child {
+    font-weight: bold;
+    color: #333;
+}
+
+#my-info-table td, #friendlist-table td, #friendadd-table td{
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+a {
+    display: inline-block;
+    margin: 15px;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #007BFF;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+a:hover {
+    background-color: #0056b3;
+}
+
+#acknowledgement{
+    font-size: 14px;
+    color: #666;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.php-messages{
+    text-align: left;
+    display: inline-block;
+    margin: 0;
+}
+
+#success-tables-messages{
+    text-align: center;
+}
+
+.submit-buttons{
+    display: inline-block;
+    font-size: 14px;
+    background-color: #007BFF;
+    border-radius: 4px;
+    margin: 15px;
+    padding: 15px;
+    color: #fff;
+    border: none;
+}
+
+.submit-buttons:hover{
+    background-color: #0056b3;
+    cursor: pointer;
+}
+
+.errors-heading{
+    color: red;
+}
+
+#friendlist-main h2:nth-of-type(1), #friendadd-main h2:nth-of-type(1) {
+    border-bottom: none;
+    margin-bottom: 0px;
+}
+
+#friendlist-main h2:nth-of-type(2), #friendadd-main h2:nth-of-type(2){
+    margin-top: 0px;
+}
+
+#discussionpic{
+    max-width: 100%;
+    height: auto;
+}
+
+#about-main{
+    text-align:left;
+}
+
+#about-main ol ul{
+    list-style-type: disc;
+}
