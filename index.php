@@ -15,22 +15,6 @@
 <?php
 // Start session
 session_start();
-// DEBUG 
-$host = getenv('MYSQLHOST');
-$dbnm = getenv('MYSQLDATABASE');
-$user = getenv('MYSQLUSER');
-$pswd = getenv('MYSQLPASSWORD');
-$port = getenv('MYSQLPORT');
-
-echo "Host: $host <br>";
-echo "DB: $dbnm <br>";
-echo "User: $user <br>";
-echo "Port: $port <br>";
-
-$conn = new mysqli($host, $user, $pswd, $dbnm, $port);
-echo "Connect error: " . $conn->connect_error . "<br>";
-echo "Connect errno: " . $conn->connect_errno . "<br>";
-
 $_SESSION['loggedin'] = false;
 
 ?>
