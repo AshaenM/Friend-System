@@ -1,3 +1,7 @@
+<?php
+// Start session
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,12 +15,6 @@
 </head>
 
 <body>
-
-<?php
-// Start session
-session_start();
-?>
-
     <main>
         <h1>My Friend System</h1>
         <h2>Log in Page</h2>

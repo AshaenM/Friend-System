@@ -1,3 +1,8 @@
+<?php
+// Start session
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,9 +18,6 @@
 <body>
     
 <?php
-// Start session
-session_start();
-
 // Check if the user clicks the friendlist button
 if (isset($_GET['action']) && $_GET['action'] == 'friendlist') {
     // Check if the user has logged in

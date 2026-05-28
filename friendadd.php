@@ -1,3 +1,7 @@
+<?php
+// Start session
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,9 +17,6 @@
 <body>
 
 <?php
-// Start session
-session_start();
-
 // Retrieve session variables from previous page
 $name = $_SESSION["profile_name"];
 $email = $_SESSION["my_email"];
