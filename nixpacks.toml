@@ -1,5 +1,0 @@
-[phases.setup]
-nixPkgs = ["frankenphp", "php83Extensions.mysqli"]
-
-[start]
-cmd = "frankenphp run"
