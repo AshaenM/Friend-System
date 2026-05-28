@@ -23,7 +23,7 @@ $email = $_SESSION["my_email"];
 require_once("settings.php");
 
 // Create a connection to the database
-$conn = new mysqli($host, $user, $pswd, $dbnm);
+$conn = new mysqli($host, $user, $pswd, $dbnm, $port);
 
 
 // Function to get the friend count for the logged-in user

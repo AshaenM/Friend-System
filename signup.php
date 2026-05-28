@@ -70,7 +70,7 @@ session_start();
     require_once("settings.php");
 
     // Create a connection to the database
-    $conn = new mysqli($host, $user, $pswd, $dbnm);
+    $conn = new mysqli($host, $user, $pswd, $dbnm, $port);
 
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);

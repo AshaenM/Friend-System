@@ -24,7 +24,7 @@ $email = $_SESSION["my_email"];
 require_once("settings.php");
 
 // Create a connection to the database
-$conn = new mysqli($host, $user, $pswd, $dbnm);
+$conn = new mysqli($host, $user, $pswd, $dbnm, $port);
 
 // Get total number of friends count for pagination
 $getTotalFriendsSql = "

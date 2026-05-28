@@ -50,7 +50,7 @@ $_SESSION['loggedin'] = false;
     require_once("settings.php");
 
     // Create a connection to the database
-    $conn = new mysqli($host, $user, $pswd, $dbnm);
+    $conn = new mysqli($host, $user, $pswd, $dbnm, $port);
 
     // Query to create a table named friends if it doesnt exist already
     $createFriendsTablesql = "
