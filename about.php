@@ -1,8 +1,7 @@
 <?php
 // Start session
 session_start();
-?>
-<!DOCTYPE html>
+?><!DOCTYPE html>
 <html lang="en">
 
 <head>
