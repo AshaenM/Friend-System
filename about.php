@@ -1,7 +1,31 @@
 <?php
-// Start session
 session_start();
-?><!DOCTYPE html>
+
+// Check if the user clicks the friendlist button
+if (isset($_GET['action']) && $_GET['action'] == 'friendlist') {
+    if (isset($_SESSION['loggedin'])) {
+        if ($_SESSION['loggedin'] == false) {
+            $_SESSION['gotofriendlist'] = true;
+            header("location:login.php");
+        } else {
+            header("location:friendlist.php");
+        }
+    }
+}
+
+// Check if the user clicks the friendadd button
+if (isset($_GET['action']) && $_GET['action'] == 'friendadd') {
+    if (isset($_SESSION['loggedin'])) {
+        if ($_SESSION['loggedin'] == false) {
+            $_SESSION['gotofriendadd'] = true;
+            header("location:login.php");
+        } else {
+            header("location:friendadd.php");
+        }
+    }
+}
+?>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -14,41 +38,6 @@ session_start();
 </head>
 
 <body>
-    
-<?php
-// Check if the user clicks the friendlist button
-if (isset($_GET['action']) && $_GET['action'] == 'friendlist') {
-    // Check if the user has logged in
-    if (isset($_SESSION['loggedin'])) {
-        // If user has not logged in yet, take the user to the login page and once the user logs in, go to friendlist.php
-        if ($_SESSION['loggedin'] == false) {
-            $_SESSION['gotofriendlist'] = true;
-            header("location:login.php");
-        }
-        // If the user has already logged in, take the user to friendlist.php
-        else {
-            header("location:friendlist.php");
-        }
-    }
-}
-
-// Check if the user clicks the friendadd button
-if (isset($_GET['action']) && $_GET['action'] == 'friendadd') {
-    // Check if the user has logged in
-    if (isset($_SESSION['loggedin'])) {
-        // If user has not logged in yet, take the user to the login page and once the user logs in, go to friendadd.php
-        if ($_SESSION['loggedin'] == false) {
-            $_SESSION['gotofriendadd'] = true;
-            header("location: login.php");
-        }
-        // If the user has already logged in, take the user to friendadd.php
-        else {
-            header("location: friendadd.php");
-        }
-    }
-}
-?>
-
     <main id="about-main">
         <h1>About My Friend System</h1>
 
