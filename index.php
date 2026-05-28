@@ -1,3 +1,4 @@
+<?php session_start(); $_SESSION['loggedin'] = false; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,14 +12,6 @@
 </head>
 
 <body>
-
-<?php
-// Start session
-session_start();
-$_SESSION['loggedin'] = false;
-
-?>
-
     <main>
         <h1>My Friend System</h1>
         <h2>Assignment Home Page</h2>
