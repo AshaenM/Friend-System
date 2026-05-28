@@ -1,7 +1,13 @@
-<?php 
-//Database details
-$host = "feenix-mariadb.swin.edu.au"; 
-$user = "s104313773";
-$pswd = "231203";
-$dbnm = "s104313773_db";
-?> 
+<?php
+$host = getenv('MYSQLHOST');
+$db   = getenv('MYSQLDATABASE');
+$user = getenv('MYSQLUSER');
+$pass = getenv('MYSQLPASSWORD');
+$port = getenv('MYSQLPORT');
+
+$conn = new mysqli($host, $user, $pass, $db, $port);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+?>
